@@ -4,7 +4,7 @@
 ![experimental][experimental-image]
 [![js-standard-style][standard-image]][standard-url]
 
-3d shapes for use with [`stack.gl`](http://stack.gl). 
+Create 3d shapes for use with [`stack.gl`](http://stack.gl). 
 
 This module provides a constructor that wraps [`gl-geometry`](http://github.com/stackgl/gl-geometry) and [`gl-mat4`](http://github.com/stackgl/gl-mat4), making it simpler to create a geometry from a simplicial complex and update its transforms.
 
