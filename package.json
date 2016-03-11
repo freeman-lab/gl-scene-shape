@@ -1,7 +1,7 @@
 {
   "name": "gl-shape",
-  "version": "1.0.0",
-  "description": "3d shape for use with stack.gl",
+  "version": "1.0.1",
+  "description": "create 3d shape for use with stack.gl",
   "main": "index.js",
   "scripts": {
     "start": "watchify-server example.js | garnish",
@@ -16,7 +16,8 @@
     "gl",
     "3d",
     "shader",
-    "geometry"
+    "geometry",
+    "stackgl"
   ],
   "author": "freeman-lab",
   "license": "MIT",
