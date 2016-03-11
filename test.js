@@ -10,8 +10,8 @@ var gl = context(canvas)
 test('construction', function (t) {
   var result = shape(gl, {complex: bunny, position: [0, 0, 0]})
   t.ok(result.attributes.geometry, 'geometry defined')
-  t.deepEquals(result.attributes.model, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
-  t.deepEquals(result.attributes.modelNormal, [1, 0, 0, 0, 1, 0, 0, 0, 1])
+  allclose(t)(result.attributes.model, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
+  allclose(t)(result.attributes.modelNormal, [1, 0, 0, 0, 1, 0, 0, 0, 1])
   t.end()
 })
 
