@@ -18,7 +18,7 @@ var material = Material(gl, normal)
 var mat4 = require('gl-mat4')
 var projection = mat4.create()
 var view = mat4.lookAt(mat4.create(), [0, 15, 20], [0, 0, 0], [0, 1, 0])
-mat4.perspective(projection, Math.PI / 4, gl.drawingBufferWidth /  gl.drawingBufferHeight, 0.01, 10000)
+mat4.perspective(projection, Math.PI / 4, gl.drawingBufferWidth / gl.drawingBufferHeight, 0.01, 10000)
 
 // set flags and bind shaders
 gl.enable(gl.DEPTH_TEST)

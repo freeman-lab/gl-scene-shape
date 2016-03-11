@@ -6,12 +6,12 @@ var normals = require('normals')
 var reindex = require('mesh-reindex')
 var unindex = require('unindex-mesh')
 var isnumeric = require('fast-isnumeric')
-var isfunction = function(value) {return typeof value === 'function'}
+var isfunction = function (value) { return typeof value === 'function' }
 
 module.exports = function Shape (gl, data) {
   if (!(this instanceof Shape)) return new Shape(gl, data)
-  if (!gl) throw Error ("Must provide a weblgl context")
-  if (!data.complex) throw Error ("Must provide a simplicial complex")
+  if (!gl) throw Error('Must provide a weblgl context')
+  if (!data.complex) throw Error('Must provide a simplicial complex')
   if (typeof data.flatten === 'undefined') data.flatten = true
   var self = this
 

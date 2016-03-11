@@ -3,7 +3,6 @@ var test = require('tape')
 var allclose = require('test-allclose')
 var shape = require('./index.js')
 var bunny = require('bunny')
-var _ = require('lodash')
 
 var canvas = document.body.appendChild(document.createElement('canvas'))
 var gl = context(canvas)
