@@ -34,6 +34,12 @@ test('rotation', function (t) {
   t.end()
 })
 
+test('all', function (t) {
+  var result = shape(gl, {complex: bunny, position: [1, 2, 3], scale: [1, 2, 3], rotation: {theta: Math.PI, axis: [0, 0, 1]}})
+  allclose(t)(result.attributes.model, [-1, 0, 0, 0, 0, -2, 0, 0, 0, 0, 3, 0, 1, 2, 3, 1])
+  t.end()
+})
+
 test('update position', function (t) {
   var result = shape(gl, {complex: bunny, position: [0, 0, 0]})
   allclose(t)(result.attributes.model, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
@@ -55,5 +61,15 @@ test('update rotation', function (t) {
   allclose(t)(result.attributes.model, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
   result.rotation(Math.PI, [0, 0, 1])
   allclose(t)(result.attributes.model, [-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
+  t.end()
+})
+
+test('update all', function (t) {
+  var result = shape(gl, {complex: bunny, position: [0, 0, 0]})
+  allclose(t)(result.attributes.model, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
+  result.position([1, 2, 3])
+  result.scale([1, 2, 3])
+  result.rotation(Math.PI, [0, 0, 1])
+  allclose(t)(result.attributes.model, [-1, 0, 0, 0, 0, -2, 0, 0, 0, 0, 3, 0, 1, 2, 3, 1])
   t.end()
 })
