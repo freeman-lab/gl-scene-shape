@@ -50,7 +50,7 @@ And update its position (which updates its underlying model matrix)
 shape.position([0, 10, 0])
 ```
 
-See [example.js](example.js) for a complex rendered example or call `npm start` to run it.
+See [example.js](example.js) for a complete example of a rendered 3d shape, and call `npm start` to run it.
 
 ## usage
 
