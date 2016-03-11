@@ -68,6 +68,8 @@ And the following are optional
 - `model` a 4x4 matrix for directly specifying the model matrix
 - `flatten` a boolean flag that if true will convert indexed meshes to triangles for non-interpolated geometries
 
+If `positions`, `scale`, or `rotation` are specified they will be used to set the `model` matrix.
+
 #### `shape.attributes`
 
 All derived attributes are stored on `shape.attributes`, and include
