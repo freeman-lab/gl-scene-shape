@@ -1,5 +1,9 @@
 # gl-shape
 
+[![NPM version][npm-image]][npm-url]
+![experimental][experimental-image]
+[![js-standard-style][standard-image]][standard-url]
+
 > 3d shapes for use with [`stack.gl`](http://stack.gl). 
 
 This module provides a constructor that wraps `gl-geometry` and `gl-mat4`, making it simpler to create a geometry from a simplicial complex and update its transforms.
@@ -81,3 +85,8 @@ Update the scale along each dimension. Can also pass a single value.
 
 Update the rotation.
 
+[npm-image]: https://img.shields.io/badge/npm-v1.0.0-lightgray.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/gl-shape
+[standard-image]: https://img.shields.io/badge/code%20style-standard-lightgray.svg?style=flat-square
+[standard-url]: https://github.com/feross/standard
+[experimental-image]: https://img.shields.io/badge/stability-experimental-lightgray.svg?style=flat-square
