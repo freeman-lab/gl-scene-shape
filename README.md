@@ -20,9 +20,9 @@ Define data for your shape
 
 ```javascript
 var data = {
-  complex: require('bunny')
+  complex: require('bunny'),
   position: [0, 10, 20],
-  scale: [1, 2, 1],
+  scale: [1, 2, 1]
 }
 ```
 
