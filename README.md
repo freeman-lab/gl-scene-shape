@@ -31,19 +31,19 @@ var shape = require('gl-shape')(data)
 You can bind its geometry to a shader
 
 ```javascript
-shape.geometry.bind(shader)
+shape.attributes.geometry.bind(shader)
 ```
 
 Use its matrices to set uniforms
 
 ```javascript
-shader.uniforms.model = shape.model
+shader.uniforms.model = shape.attributes.model
 ```
 
 And update its position (which updates its underlying model matrix)
 
 ```javascript
-shape.position([0, 10, 0])
+shape.attributes.position([0, 10, 0])
 ```
 
 See [example.js](example.js) or call `npm start` for a more complete example.
