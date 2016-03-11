@@ -47,7 +47,7 @@ shader.uniforms.model = shape.attributes.model
 And update its position (which updates its underlying model matrix)
 
 ```javascript
-shape.attributes.position([0, 10, 0])
+shape.position([0, 10, 0])
 ```
 
 See [example.js](example.js) or call `npm start` for a more complete example.
