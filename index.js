@@ -25,12 +25,17 @@ module.exports = function Shape (gl, data) {
     return geometry
   }
 
+  var updateNormal = function () {
+    mat3.normalFromMat4(self.attributes.modelNormal, self.attributes.model)
+  }
+
   self.position = function (value) {
     var m = self.attributes.model
     if (isfunction(value)) value = value([m[12], m[13], m[14]])
     m[12] = value[0]
     m[13] = value[1]
     m[14] = value[2]
+    updateNormal()
   }
 
   self.scale = function (value) {
@@ -49,6 +54,7 @@ module.exports = function Shape (gl, data) {
     m[8] = (m[8] / z) * value[2]
     m[9] = (m[9] / z) * value[2]
     m[10] = (m[10] / z) * value[2]
+    updateNormal()
   }
 
   self.rotation = function (value, axis) {
@@ -61,6 +67,7 @@ module.exports = function Shape (gl, data) {
     mat4.translate(self.attributes.model, mat4.create(), [m[12], m[13], m[14]])
     mat4.rotate(self.attributes.model, self.attributes.model, value, axis)
     mat4.scale(self.attributes.model, self.attributes.model, [x, y, z])
+    updateNormal()
   }
 
   self.attributes = {
