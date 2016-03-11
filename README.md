@@ -54,7 +54,7 @@ See [example.js](example.js) or call `npm start` for a more complete example.
 
 ## usage
 
-##### `shape = require('gl-shape')(gl, data)`
+#### `shape = require('gl-shape')(gl, data)`
 
 Create a shape by providing a `gl` context and shape `data`.
 
@@ -68,20 +68,22 @@ And the following are optional
 - `model` a 4x4 matrix for directly specifying the model matrix
 - `flatten` a boolean flag that if true will convert indexed meshes to triangles for non-interpolated geometries
 
+#### `shape.attributes`
+
 All derived attributes are stored on `shape.attributes`, and include
 - `geometry` the renderable geometry
 - `model` the 4x4 model matrix
 - `modelNormal` the normal vector for the model
 
-##### `shape.position(vector)`
+#### `shape.position(vector)`
 
 Update the position.
 
-##### `shape.scale(vector)`
+#### `shape.scale(vector)`
 
 Update the scale along each dimension. Can also pass a single value.
 
-##### `shape.rotation(angle, axis)`
+#### `shape.rotation(angle, axis)`
 
 Update the rotation.
 
